@@ -5892,7 +5892,7 @@ var dom = (function() {
         });
       }
 
-      // Bind all modal
+      // Fire all modal
       $('.modal').modal({
           dismissible: true
         }
@@ -6710,12 +6710,23 @@ var dom = (function() {
         var invertedKeyMap = func.invertObject(keyMap);
         var $buttons = $container.find('.btn');
 
-        console.log($container);
+        // @todo add materialize background color support class on air-mode toolbar
+        $container.find('.popover-content').addClass('blue');
+        $container.find('.arrow').css(
+          'border-color',
+          'transparent transparent ' + $container.find('.popover-content').css('background-color') + ' transparent'
+        );
+        $container.find('.note-toolbar').addClass('blue');
 
         $buttons.each(function(i, elBtn) {
           var $btn = $(elBtn);
           var sShortcut = invertedKeyMap[$btn.data('event')];
           var text = $btn.attr('title');
+
+          // @todo Support for materialize colors and add themes to the toolbar
+          //$btn.addClass($container.attr('data-background-color'));
+          //$btn.addClass($container.attr('data-text-color'));
+          $btn.addClass('blue');
 
           if (sShortcut) {
             $btn.attr('data-tooltip', function(i, v) {
@@ -6858,7 +6869,8 @@ var dom = (function() {
       $('<textarea class="note-codable"></textarea>').prependTo($editor);
 
       //04. create Toolbar
-      var $toolbar = $('<div class="note-toolbar btn-toolbar" />');
+      // @todo materialize colors support
+      var $toolbar = $('<div class="note-toolbar btn-toolbar blue" />');
       for (var idx = 0, len = options.toolbar.length; idx < len; idx ++) {
         var groupName = options.toolbar[idx][0];
         var groupButtons = options.toolbar[idx][1];
