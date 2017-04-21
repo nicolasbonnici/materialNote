@@ -1,5 +1,5 @@
 {
-  "name": "MaterialNote",
+  "name": "materialsummernote",
   "version": "1.2.1",
   "description": "A fork of Summernote.js ported to Materialize",
   "devDependencies": {
@@ -12,6 +12,24 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Cerealkillerway/materialNote"
-  }
+    "url": "git+https://github.com/Cerealkillerway/materialNote.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cerealkillerway/materialNote/issues"
+  },
+  "homepage": "https://github.com/Cerealkillerway/materialNote#readme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "material",
+    "materialize",
+    "wysiwyg",
+    "editor",
+    "contenteditable",
+    "note",
+    "flat"
+  ],
+  "author": "Nicolas Bonnici <nicolasbonnici@gmail.com> (https://nbonnici.info)"
 }
