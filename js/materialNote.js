@@ -6936,11 +6936,11 @@ var dom = (function() {
                     toolbar.css({'top': relativeOffset + 'px', 'z-index': 2000});
                 } else {
                     if ((currentOffset < toolbarOffset) && (currentOffset < deactivateOffsetBottom)) {
-                        toolbar.css({'top': 0, 'z-index': 1052});
+                        toolbar.css({'top': 0, 'z-index': 500});
 
                         if (currentOffset > deactivateOffsetTop) {
                             relativeOffset = currentOffset - $editor.offset().top + otherBarHeight;
-                            toolbar.css({'top': relativeOffset + 'px', 'z-index': 2000});
+                            toolbar.css({'top': relativeOffset + 'px', 'z-index': 500});
                         }
                     }
                 }
