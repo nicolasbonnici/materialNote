@@ -6933,7 +6933,7 @@ var dom = (function() {
 
                 if ((currentOffset > activateOffset) && (currentOffset < deactivateOffsetBottom)) {
                     relativeOffset = currentOffset - $editor.offset().top + otherBarHeight;
-                    toolbar.css({'top': relativeOffset + 'px', 'z-index': 2000});
+                    toolbar.css({'top': relativeOffset + 'px', 'z-index': 500}); // @todo dynamiser le parametre de z-index
                 } else {
                     if ((currentOffset < toolbarOffset) && (currentOffset < deactivateOffsetBottom)) {
                         toolbar.css({'top': 0, 'z-index': 500});
